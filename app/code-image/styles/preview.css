@@ -1,0 +1,35 @@
+/* Preview container styles */
+.preview-container {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.preview-window {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.window-controls {
+  position: relative;
+  z-index: 10;
+}
+
+.window-button {
+  transition: transform 0.2s ease;
+}
+
+.window-button:hover {
+  transform: scale(1.1);
+}
+
+/* Gradient animation */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s linear infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

@@ -1,0 +1,41 @@
+/* Editor specific styles */
+.editor-wrapper {
+  border-radius: 0 0 0.5rem 0.5rem;
+  overflow: hidden;
+  background-color: #282c34;
+}
+
+.cm-editor {
+  font-family: 'Fira Code', monospace !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+.cm-editor .cm-scroller {
+  padding: 1rem 0;
+}
+
+.cm-editor .cm-gutters {
+  background-color: #282c34 !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.cm-editor .cm-lineNumbers {
+  color: #495162 !important;
+}
+
+.cm-editor .cm-activeLine {
+  background-color: rgba(44, 49, 60, 0.5) !important;
+}
+
+.cm-editor .cm-activeLineGutter {
+  background-color: rgba(44, 49, 60, 0.5) !important;
+}
+
+.cm-editor .cm-selectionBackground {
+  background-color: rgba(62, 68, 81, 0.8) !important;
+}
+
+.cm-editor .cm-cursor {
+  border-left-color: #528bff !important;
+}
