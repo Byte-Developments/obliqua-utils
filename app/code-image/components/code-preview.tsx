@@ -16,7 +16,7 @@ export function CodePreview({ code, language, gradientPreset, onChange }: CodePr
   const preset = GRADIENT_PRESETS[gradientPreset];
   
   return (
-    <div id="preview-container" className={cn(
+    <div id="preview-main" className={cn(
       "p-8 md:p-12 rounded-xl shadow-2xl",
       "bg-gradient-to-br",
       preset.from,

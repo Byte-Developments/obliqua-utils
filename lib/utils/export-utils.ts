@@ -9,7 +9,7 @@ export async function handleExport(
   format: 'svg' | 'png' = 'svg'
 ): Promise<void> {
   try {
-    const previewContainer = document.getElementById('preview-container');
+    const previewContainer = document.getElementById('preview-main');
     if (!previewContainer) {
       throw new Error('Preview container not found');
     }
