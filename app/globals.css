@@ -18,6 +18,12 @@
   }
 }
 
+::selection {
+  background: #0069ff;
+  color: #fff;
+  text-shadow: none;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
