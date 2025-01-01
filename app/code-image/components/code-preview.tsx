@@ -30,7 +30,7 @@ export function CodePreview({ code, language, gradientPreset, onChange }: CodePr
               code={code}
               language={language}
               onChange={onChange}
-              readOnly={true}
+              readOnly={false}
             />
           </div>
         </WindowFrame>
