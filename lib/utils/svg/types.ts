@@ -1,14 +1,16 @@
+import type { SvgGradient } from '@/lib/types/gradient';
+
 export interface SyntaxTheme {
-  keyword: string;    // function, const, let, etc.
-  string: string;     // "strings" and 'strings'
-  number: string;     // 123, 3.14
-  comment: string;    // // comments
-  function: string;   // function names
-  variable: string;   // variable names
-  operator: string;   // +, -, *, /, etc.
-  type: string;       // string, number, boolean
-  punctuation: string; // (), {}, [], etc.
-  default: string;    // default text color
+  keyword: string;
+  string: string;
+  number: string;
+  comment: string;
+  function: string;
+  variable: string;
+  operator: string;
+  type: string;
+  punctuation: string;
+  default: string;
 }
 
 export interface ExportConfig {
@@ -23,9 +25,6 @@ export interface ExportConfig {
     lineNumbers: string;
     syntax: SyntaxTheme;
   };
-  gradient?: {
-    startColor: string;
-    endColor: string;
-  };
+  gradient?: SvgGradient;
   windowControls?: boolean;
 }

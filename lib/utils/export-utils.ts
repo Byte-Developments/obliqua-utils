@@ -1,6 +1,6 @@
 import { exportToSvg } from './svg/export';
 import { toast } from 'sonner';
-import { extractGradient } from './gradient/convert';
+import { extractGradient, convertToSvgGradient } from './gradient/convert';
 import { defaultSyntaxTheme } from './syntax/theme';
 
 export async function handleExport(
@@ -26,7 +26,8 @@ export async function handleExport(
     const width = Math.round(rect.width);
     const height = Math.round(rect.height);
 
-    const gradient = extractGradient(previewContainer);
+    const tailwindGradient = extractGradient(previewContainer);
+    const gradient = tailwindGradient ? convertToSvgGradient(tailwindGradient) : undefined;
 
     const svg = exportToSvg(previewContainer, {
       code,
