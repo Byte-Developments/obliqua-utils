@@ -1,3 +1,5 @@
+import { GradientPresets } from './types/gradient';
+
 export const CODE_LANGUAGES = [
   { value: "javascript", label: "JavaScript" },
   { value: "typescript", label: "TypeScript" },
@@ -16,7 +18,7 @@ export const CODE_LANGUAGES = [
   { value: "sql", label: "SQL" },
 ] as const;
 
-export const GRADIENT_PRESETS = [
+export const GRADIENT_PRESETS: GradientPresets = [
   { 
     name: "Midnight",
     from: "rgb(59, 130, 246)",
