@@ -8,28 +8,28 @@ const features = [
     description: "Create short, memorable links for your URLs",
     href: "/url-shortener",
     gradient: "from-blue-500 to-cyan-500",
-    iconPath: "../public/icons/url_shortener.svg",
+    iconPath: "icons/url_shortener.svg",
   },
   {
     title: "Code Image Generator",
     description: "Generate beautiful images of your code snippets",
     href: "/code-image",
     gradient: "from-purple-500 to-pink-500",
-    iconPath: "../public/icons/code_screenshot.svg",
+    iconPath: "icons/code_screenshot.svg",
   },
   {
     title: "Icon Maker",
     description: "Create custom gradient icons with Font Awesome",
     href: "/icon-maker",
     gradient: "from-red-500 to-orange-500",
-    iconPath: "../public/icons/icon_maker.svg",
+    iconPath: "icons/icon_maker.svg",
   },
   {
     title: "Pastebin",
     description: "Share code snippets with optional expiration",
     href: "/pastebin",
     gradient: "from-green-500 to-emerald-500",
-    iconPath: "../public/icons/pastebin.svg",
+    iconPath: "icons/pastebin.svg",
   },
 ];
 
