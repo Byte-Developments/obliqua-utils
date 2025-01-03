@@ -10,9 +10,19 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 export const supabase = createClient<Database>(supabaseUrl, supabaseAnonKey, {
   auth: {
-    persistSession: false, // Disable session persistence
-    detectSessionInUrl: false, // Disable session detection in URL
-    autoRefreshToken: false, // Disable token auto-refresh
-    storage: undefined // Don't use storage
+    persistSession: false,
+    detectSessionInUrl: false,
+    autoRefreshToken: false,
+    storage: undefined
+  },
+  global: {
+    headers: {
+      'x-my-custom-header': 'modern-utilities'
+    }
+  },
+  realtime: {
+    params: {
+      eventsPerSecond: 2
+    }
   }
 });
