@@ -8,24 +8,28 @@ const features = [
     description: "Create short, memorable links for your URLs",
     href: "/url-shortener",
     gradient: "from-blue-500 to-cyan-500",
+    iconPath: "../public/icons/url_shortener.svg",
   },
   {
     title: "Code Image Generator",
     description: "Generate beautiful images of your code snippets",
     href: "/code-image",
     gradient: "from-purple-500 to-pink-500",
+    iconPath: "../public/icons/code_screenshot.svg",
   },
   {
     title: "Icon Maker",
     description: "Create custom gradient icons with Font Awesome",
     href: "/icon-maker",
     gradient: "from-red-500 to-orange-500",
+    iconPath: "../public/icons/icon_maker.svg",
   },
   {
     title: "Pastebin",
     description: "Share code snippets with optional expiration",
     href: "/pastebin",
     gradient: "from-green-500 to-emerald-500",
+    iconPath: "../public/icons/pastebin.svg",
   },
 ];
 
@@ -45,7 +49,10 @@ export default function Home() {
         {features.map((feature) => (
           <Link key={feature.title} href={feature.href}>
             <Card className="p-6 h-full transition-all duration-200 hover:scale-105 gradient-border">
-              <div className={`h-24 rounded-lg bg-gradient-to-r ${feature.gradient} mb-4`} />
+              <div className={`h-24 rounded-lg bg-gradient-to-r ${feature.gradient} mb-4`}>
+                <img src={feature.iconPath} alt={feature.title} className="h-12 w-12" />
+              </div>
+              
               <h2 className="text-xl font-semibold mb-2">{feature.title}</h2>
               <p className="text-muted-foreground">{feature.description}</p>
             </Card>
