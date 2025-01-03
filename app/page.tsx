@@ -50,7 +50,7 @@ export default function Home() {
           <Link key={feature.title} href={feature.href}>
             <Card className="p-6 h-full transition-all duration-200 hover:scale-105 gradient-border">
               <div className={`h-24 rounded-lg bg-gradient-to-r ${feature.gradient} mb-4`}>
-                <img src={feature.iconPath} alt={feature.title} className="h-12 w-12" />
+                <img src={feature.iconPath} alt={feature.title} className="flex justify-center items-center h-512 w-512" />
               </div>
               
               <h2 className="text-xl font-semibold mb-2">{feature.title}</h2>
