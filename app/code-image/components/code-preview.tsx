@@ -14,15 +14,18 @@ interface CodePreviewProps {
 
 export function CodePreview({ code, language, gradientPreset, onChange }: CodePreviewProps) {
   const preset = GRADIENT_PRESETS[gradientPreset];
+  const gradientStyle = {
+    background: preset.via
+      ? `linear-gradient(to bottom right, ${preset.from}, ${preset.via}, ${preset.to})`
+      : `linear-gradient(to bottom right, ${preset.from}, ${preset.to})`
+  };
   
   return (
-    <div id="preview-main" className={cn(
-      "p-8 md:p-12 rounded-xl shadow-2xl",
-      "bg-gradient-to-br",
-      preset.from,
-      preset.via,
-      preset.to
-    )}>
+    <div 
+      id="preview-main" 
+      className="p-8 md:p-12 rounded-xl shadow-2xl"
+      style={gradientStyle}
+    >
       <div className="max-w-4xl mx-auto">
         <WindowFrame>
           <div className="editor-wrapper">

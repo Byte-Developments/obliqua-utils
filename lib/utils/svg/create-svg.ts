@@ -1,6 +1,15 @@
-import { SvgConfig } from './types/config';
 import { createGradientDef } from './gradient';
 import { sanitizePath } from './sanitize';
+
+interface SvgConfig {
+  width?: number;
+  height?: number;
+  viewBox?: string;
+  gradient?: {
+    startColor: string;
+    endColor: string;
+  };
+}
 
 export function createSvg(pathData: string, config: SvgConfig = {}): string {
   const {

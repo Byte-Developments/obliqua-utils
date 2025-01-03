@@ -19,50 +19,50 @@ export const CODE_LANGUAGES = [
 export const GRADIENT_PRESETS = [
   { 
     name: "Midnight",
-    from: "from-blue-500",
-    via: "via-purple-500",
-    to: "to-pink-500"
+    from: "rgb(59, 130, 246)",
+    via: "rgb(147, 51, 234)",
+    to: "rgb(236, 72, 153)"
   },
   {
     name: "Sunset",
-    from: "from-orange-500",
-    via: "via-red-500",
-    to: "to-pink-500"
+    from: "rgb(249, 115, 22)",
+    via: "rgb(239, 68, 68)",
+    to: "rgb(236, 72, 153)"
   },
   {
     name: "Forest",
-    from: "from-green-500",
-    via: "via-emerald-500",
-    to: "to-teal-500"
+    from: "rgb(34, 197, 94)",
+    via: "rgb(16, 185, 129)",
+    to: "rgb(20, 184, 166)"
   },
   {
     name: "Ocean",
-    from: "from-blue-500",
-    via: "via-cyan-500",
-    to: "to-indigo-500"
+    from: "rgb(59, 130, 246)",
+    via: "rgb(6, 182, 212)",
+    to: "rgb(99, 102, 241)"
   },
   {
     name: "Aurora",
-    from: "from-green-400",
-    via: "via-teal-300",
-    to: "to-blue-500"
+    from: "rgb(74, 222, 128)",
+    via: "rgb(45, 212, 191)",
+    to: "rgb(59, 130, 246)"
   },
   {
     name: "Dusk",
-    from: "from-indigo-600",
-    via: "via-purple-600",
-    to: "to-pink-600"
+    from: "rgb(79, 70, 229)",
+    via: "rgb(147, 51, 234)",
+    to: "rgb(219, 39, 119)"
   },
   {
     name: "Fire",
-    from: "from-yellow-400",
-    via: "via-orange-500",
-    to: "to-red-600"
+    from: "rgb(250, 204, 21)",
+    via: "rgb(249, 115, 22)",
+    to: "rgb(239, 68, 68)"
   },
   {
     name: "Royal",
-    from: "from-purple-600",
-    via: "via-indigo-500",
-    to: "to-blue-700"
+    from: "rgb(147, 51, 234)",
+    via: "rgb(79, 70, 229)",
+    to: "rgb(29, 78, 216)"
   }
 ] as const;

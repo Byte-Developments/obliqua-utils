@@ -1,11 +1,9 @@
-export function getGradientStyle(preset: { from: string; via?: string; to: string }) {
-  const fromColor = `hsl(var(--${preset.from.split('-')[1]}))`;
-  const viaColor = preset.via ? `hsl(var(--${preset.via.split('-')[1]}))` : undefined;
-  const toColor = `hsl(var(--${preset.to.split('-')[1]}))`;
+import { GRADIENT_PRESETS } from '@/lib/constants';
 
+export function getGradientStyle(preset: typeof GRADIENT_PRESETS[number]) {
   return {
-    background: viaColor
-      ? `linear-gradient(to bottom right, ${fromColor}, ${viaColor}, ${toColor})`
-      : `linear-gradient(to bottom right, ${fromColor}, ${toColor})`
+    background: preset.via
+      ? `linear-gradient(to bottom right, ${preset.from}, ${preset.via}, ${preset.to})`
+      : `linear-gradient(to bottom right, ${preset.from}, ${preset.to})`
   };
 }

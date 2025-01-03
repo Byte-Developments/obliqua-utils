@@ -7,14 +7,9 @@ export function getValidIcons(): Record<string, IconDefinition> {
   const icons: Record<string, IconDefinition> = {};
   
   (Object.keys(solidIcons) as IconKey[]).forEach((key) => {
-    if (key.startsWith('fa') && typeof solidIcons[key] === 'object') {
+    if (key.startsWith('fa') && isIconDefinition(solidIcons[key])) {
       const iconName = key.replace(/^fa/, '').toLowerCase();
-      const icon = solidIcons[key];
-      
-      // Type guard to ensure we only add valid icon definitions
-      if (isIconDefinition(icon)) {
-        icons[iconName] = icon;
-      }
+      icons[iconName] = solidIcons[key] as IconDefinition;
     }
   });
   

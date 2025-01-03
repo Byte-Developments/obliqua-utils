@@ -1,10 +1,10 @@
-import { GradientConfig } from './types';
+import { SvgGradientConfig } from './types/gradient';
 
 export function createBackground(
   width: number, 
   height: number, 
   background: string = '#282c34',
-  gradient?: GradientConfig
+  gradient?: SvgGradientConfig
 ): string {
   if (!gradient) {
     return `<rect 
@@ -16,12 +16,11 @@ export function createBackground(
     />`;
   }
 
-  const { from, via, to } = gradient;
+  const { startColor, endColor } = gradient;
   return `<defs>
     <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="${from}"/>
-      ${via ? `<stop offset="50%" stop-color="${via}"/>` : ''}
-      <stop offset="100%" stop-color="${to}"/>
+      <stop offset="0%" stop-color="${startColor}"/>
+      <stop offset="100%" stop-color="${endColor}"/>
     </linearGradient>
   </defs>
   <rect 
