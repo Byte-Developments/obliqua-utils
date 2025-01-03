@@ -34,7 +34,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] space-y-12">
       <div className="text-center space-y-4 max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600 animate-gradient">
-          Modern Web Utilities
+          Obliqua Utils
         </h1>
         <p className="text-xl text-muted-foreground">
           A collection of modern web utilities to enhance your development workflow.
