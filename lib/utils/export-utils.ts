@@ -1,8 +1,7 @@
 import { exportToSvg } from './svg/export';
 import { toast } from 'sonner';
-import { extractGradient } from './svg/gradient';
+import { extractGradient } from './gradient/convert';
 import { defaultSyntaxTheme } from './syntax/theme';
-import { convertToSvgGradient } from './svg/types/gradient';
 
 export async function handleExport(
   elementId: string,
@@ -27,9 +26,7 @@ export async function handleExport(
     const width = Math.round(rect.width);
     const height = Math.round(rect.height);
 
-    // Extract gradient and convert to SVG format if present
-    const baseGradient = extractGradient(previewContainer);
-    const gradient = baseGradient ? convertToSvgGradient(baseGradient) : undefined;
+    const gradient = extractGradient(previewContainer);
 
     const svg = exportToSvg(previewContainer, {
       code,
