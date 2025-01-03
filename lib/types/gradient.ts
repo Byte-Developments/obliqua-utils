@@ -16,11 +16,12 @@ export interface GradientPreset {
     viaColor?: string;
   }
   
-  // Conversion interfaces
-  export interface BaseGradientConfig {
+  // Tailwind gradient configuration
+  export interface TailwindGradientConfig {
     from: string;
     via?: string;
     to: string;
   }
   
-  export type TailwindGradientConfig = BaseGradientConfig;
+  // Utility type for gradient extraction
+  export type ExtractedGradient = TailwindGradientConfig;

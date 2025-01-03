@@ -1,9 +1,14 @@
-import { SvgGradientConfig, BaseGradientConfig, convertToSvgGradient } from './types/gradient';
-import { getTailwindGradient } from './gradient-utils';
+import type { SvgGradient } from '@/lib/types/gradient';
 
-export function createGradientDef(gradient: SvgGradientConfig): string {
-  const { id, startColor, endColor } = gradient;
+export function createGradientDef(gradient: SvgGradient): string {
+  const { id, startColor, viaColor, endColor } = gradient;
   
+  const stops = [
+    `<stop offset="0%" stop-color="${startColor}" />`,
+    ...(viaColor ? [`<stop offset="50%" stop-color="${viaColor}" />`] : []),
+    `<stop offset="100%" stop-color="${endColor}" />`
+  ];
+
   return `<linearGradient 
     id="${id}" 
     x1="0%" 
@@ -11,18 +16,6 @@ export function createGradientDef(gradient: SvgGradientConfig): string {
     x2="100%" 
     y2="100%"
   >
-    <stop offset="0%" stop-color="${startColor}" />
-    <stop offset="100%" stop-color="${endColor}" />
+    ${stops.join('\n    ')}
   </linearGradient>`;
-}
-
-export function extractGradient(element: HTMLElement): BaseGradientConfig | undefined {
-  const colors = getTailwindGradient(element);
-  if (!colors || colors.length < 2) return undefined;
-
-  return {
-    from: colors[0],
-    ...(colors.length > 2 ? { via: colors[1] } : {}),
-    to: colors[colors.length - 1]
-  };
 }

@@ -1,4 +1,4 @@
-import type { BaseGradientConfig, SvgGradient, TailwindGradientConfig } from '@/lib/types/gradient';
+import type { SvgGradient, TailwindGradientConfig } from '@/lib/types/gradient';
 
 export function convertToSvgGradient(gradient: TailwindGradientConfig): SvgGradient {
   return {
